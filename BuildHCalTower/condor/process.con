@@ -1,0 +1,16 @@
+Universe        = vanilla
+GetEnv          = True
+Notification    = Error
+Notify_user     = lxue4@gsu.edu
+Priority        = +0
+Initialdir      = /direct/phenix+sim01/phnxreco/users/lxue/G4Sim_HCalPrototype/XHeVision2/towerbuild 
+Executable      = $(Initialdir)/condor/process.csh
+Arguments       = $(Process)
+Log             = $(Initialdir)/logs/HCal_G4sPHENIX_$(Process).log
+Output          = $(Initialdir)/logs/HCal_G4sPHENIX_$(Process).out
+Error           = $(Initialdir)/logs/HCal_G4sPHENIX_$(Process).err
+
++Experiment     = "phenix"
++Job_Type       = "gsu"
+
+Queue    18
